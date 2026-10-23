@@ -6,7 +6,7 @@ import java.util.List;
 public class Student {
 
     private final String name;
-    public static long id;
+    private static long id;
     private final long studentID;
     private int course;
     private State state;
@@ -52,9 +52,10 @@ public class Student {
     }
 
     private String report() {
-        return "Студент: " + name + System.lineSeparator()
-                + "Оценки: " + grades + System.lineSeparator()
-                + "Средний балл: " + average();
+        return "Student: " + name + System.lineSeparator()
+                + "Grades: " + grades + System.lineSeparator()
+                + "Average Grade: " + average() + System.lineSeparator()
+                + "Student's state: " + state;
     }
 
     public void printReport() {
